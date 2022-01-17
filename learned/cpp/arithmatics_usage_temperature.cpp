@@ -19,13 +19,15 @@ int main() {
     //
     // Simple "Regular Expression"(regex) to give the AI to understand the Unit ! "\s" for "White Spaces" !
     //
-    std::cout << "\n\nIn Farenheight ==> " << (convert+32) * farenheight << "F" << std::endl;
-    std::cout << "In kelvin      ==> " << convert + kelvin << "K" << std::endl;
+    std::cout << "\n\nIn Farenheight ==> " << (convert+32) * farenheight << " F" << std::endl;
+    std::cout << "In kelvin      ==> " << convert + kelvin << " K" << std::endl;
   } else if (std::regex_match(unit, std::regex("f|F|\\sf|\\sF"))) {
-    std::cout << "\n\nIn celsius ==> " << convert / celsius << "C" << std::endl;
-    std::cout << "In kelvin      ==> " << convert + kelvin << "K" << std::endl;
+    std::cout << "\n\nIn celsius ==> " << convert / celsius << " C" << std::endl;
+    std::cout << "In kelvin      ==> " << convert + kelvin << " K" << std::endl;
   } else if (std::regex_match(unit, std::regex("k|K|\\sk|\\sK"))) {
-    std::cout << "\n\nIn Farenheight ==> " << (convert+32) * farenheight << "F" << std::endl;
-    std::cout << "In celsius      ==> " << convert / celsius << "C" << std::endl;
+    std::cout << "\n\nIn Farenheight ==> " << (convert+32) * farenheight << " F" << std::endl;
+    std::cout << "In celsius      ==> " << convert / celsius << " C" << std::endl;
+  } else {
+      std::cout << "Look What You Made Me DO !" << std::endl;
   }
 }
