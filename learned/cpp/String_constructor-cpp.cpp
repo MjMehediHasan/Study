@@ -15,6 +15,8 @@ int main ()
   std::string s3 (s0, 8, 3);
   std::string s4 ("A character sequence");
   std::string s5 ("Another character sequence", 12);
+  std::string s5 ("Another character sequence", 12, -1);
+// this will print string starting from 12 to all the way last
   std::string s6a (10, 'x');
   std::string s6b (10, 42);      // 42 is the ASCII code for '*'
   std::string s7 (s0.begin(), s0.begin()+7);
