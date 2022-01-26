@@ -93,6 +93,7 @@ int main() {
                         int temp{0};
                         cout << "\nEnter an Integer : ";
                         cin >> temp;
+
                         // if (!isalpha(verify)) {   // Cheking input types for safety
                         list.pb(temp);
                         cout << temp << " Added to list !" << endl;
