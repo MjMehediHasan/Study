@@ -93,14 +93,16 @@ int main() {
                         int temp{0};
                         cout << "\nEnter an Integer : ";
                         cin >> temp;
-
-                        // if (!isalpha(verify)) {   // Cheking input types for safety
-                        list.pb(temp);
-                        cout << temp << " Added to list !" << endl;
-                        // } else if (isalpha(verify)) {
-                        //     cout << "\nClear your eyes ! You made the system crush ! Quiting...\n\n" << endl;
-                        //     selBool = false;
-                        // }
+                        for (auto val : list) {
+                            if (val != temp) {
+                                goto add;  // You can't iterate and push_back in the same vector both at the same time !
+                                cout << temp << " Added to list !" << endl;
+                            } else if (val == temp) {
+                                cout << "\nNumber can't be added !\n" << temp << " Exists in the list" << endl;
+                            }
+                        }
+                        add:
+                            list.pb(temp);
                         }
                         break;
             case 'm' :
@@ -126,7 +128,6 @@ int main() {
             case 'C' : list.clear();
                        cout << "\nList is cleared\n";
                        break;
-
             case 'q' :
             case 'Q' : {cout << "'\nOk ! Good by ! 😥\n" << endl;
                         selBool = false;}
@@ -136,4 +137,4 @@ int main() {
     } while (selBool);
     //
     return 0;
-} // NOLINT | For my stupid linter
+}
