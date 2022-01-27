@@ -34,7 +34,6 @@ str cipher(str input) {
 }
 int main() {
     str inputs {};
-    str outputs {};
     while (true) {
         cout << "\nPut (D/E <space>) and Enter Your Message : " << endl;
         getline(cin, inputs);
