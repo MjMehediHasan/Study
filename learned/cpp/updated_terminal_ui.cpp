@@ -21,7 +21,7 @@ void print(const vec<int> &v);
 int check(vec<int> v);
 int selFunc(char sel, vec<int> &v);    // Some selection need real vector from "main" function
 int addVec(vec<int> &v);             // used pass by reference function to modify the real vector
-double mean(const vec<int> &v);     // mean will take the real vector for actual numbers
+double mean(vec<int> v);
 void clearVec(vec<int> v);
 int smallest(vec<int> v);
 int largest(vec<int> v);
@@ -103,16 +103,17 @@ int addVec(vec<int> &v) {
         }
     }
     v.pb(temp);   // push_back won't work while iterating through the same vector
+// return v;
 }
 
 // Mean
-double mean(const vec<int> &v) {
-    double total {0};
+double mean(vec<int> v) {
+    double total {};
     if (check(v) != false) {
         for (auto val : v) {
             total += val;
         }
-        return (total/v.size());
+    cout << "\n\nMean is : "<< (total/v.size()) << endl;
     }
 }
 
