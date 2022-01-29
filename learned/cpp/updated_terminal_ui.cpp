@@ -99,10 +99,10 @@ int addVec(vec<int> &v) {
             cout << temp << " Added to the list ! << endl";
         } else if (val == temp) {
             cout << "\nNumber is already in list !\n";
+            return 0;
         }
     }
     v.pb(temp);   // push_back won't work while iterating through the same vector
-// return v;
 }
 
 // Mean
