@@ -5,7 +5,7 @@
 #include<string>
 
 
-int loop(int r, int c) {
+void loop(int r, int c) {
     int rwMid = (r-1)/2;
     for (int i = 0; i < r; i++) {
         // Counting remaining one by one row !
