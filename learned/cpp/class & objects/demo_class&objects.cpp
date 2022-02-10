@@ -16,7 +16,7 @@
 class PLAYER {
     // attributes
     str name {"Player"};
-    int health {100}, xp {0};
+    int health {100}, xp {0};   // you can initialize them or let them collect garbage
 
     // methods
     void talk(str);
@@ -44,7 +44,7 @@ int main() {
     player_vec.pb(hero);
     PLAYER *enemy{nullptr};
     enemy = new PLAYER;
-    delete enemy;
+    delete enemy; // always release your heap memory
 
 return 0;
 }
