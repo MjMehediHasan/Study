@@ -7,12 +7,12 @@ int *apply_all(int *arr1, size_t *size1, int *arr2, size_t *size2) {
     int *new_arr{nullptr};
     new_arr = new int[*size1 * *size2];
     // (*size1 > *size2) ? bigger = *size1 : bigger = *size1;
-    int add {0};
+    int position {0};
     for (int i{0}; i < *size1; i++) {
         for (int j{0}; j < *size2; j++) {
-            new_arr[i+j+add] = (arr1[i] * arr2[j]);
+            new_arr[position] = (arr1[i] * arr2[j]);
+            position++;     // for keeping index increasing
         }
-        add += (*size2-1);  // for keeping index increasing
     }
 return new_arr;
 }
