@@ -45,6 +45,8 @@ int main() {
     PLAYER *enemy{nullptr};
     enemy = new PLAYER;
     delete enemy; // always release your heap memory
+    // don't still know why not to use "delete [] enemy;"
+    // maybe because it's from a class type
 
 return 0;
 }
