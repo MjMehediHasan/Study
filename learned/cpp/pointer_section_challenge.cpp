@@ -34,5 +34,6 @@ int main() {
     // array is already an address and size_t is a int value
     // so we need to provide reference for size1 and size2 not for array1 and array2
     print(result, size1 * size2);
+    delete [] result;
 return 0;
 }
