@@ -19,35 +19,35 @@ class player {
     // constructors with overloads
 
 
-    // player() {
-    //     name = "Def_Player";
-    //     health = 100;
-    //     xp = 0;
-    //     std::cout << "No argument constructor is called" << std::endl;
-    // }
 
-
-    // Best way is to initialize the values in the constructor when object is created
-    // not assigning them after the object is created like upper example
-
-    player()
-    : name {"Def_Player"}, health {100}, xp {0} {
+// Data is assigened to the object after creating it
+    // not the best practice
+    player() {
+        name = "Def_Player";
+        health = 100;
+        xp = 0;
         std::cout << "No argument constructor is called" << std::endl;
     }
 
+
+
+
+// Delegating constructor
+
+    // Best way is to initialize the values in the constructor when object is created
+    // just works on constructor initializer
+    // the idea is to call another constructor (same name as the class) to initialize the object
     player(std::string name)
-    : name {name}, health {100}, xp {0} {
+    : player {name, 100, 0} {
         std::cout << "String constructor created ! for " << name << std::endl;
     }
 
-    // player(std::string name, int health, int xp) {
-    //     this->name = name;
-    //     this->health = health;
-    //     this->xp = xp;
-    //     std::cout << "Three argument constructor called! for " << name << std::endl;
-    // }
 
-    // New way
+
+
+    // not assigning them after the object is created like upper example
+
+// New way
     player(std::string name, int health, int xp)
     : name {name}, health {health}, xp {xp} {
         std::cout << "Three argument constructor called! for " << name << std::endl;
