@@ -14,6 +14,7 @@ class player {
     void set_name(std::string name) {this->name = name;}    // "this" is a pointer to the object
     // void set_name(std::string name_input) {name = name_input;}
 
+    // member methods with same name as class is called constructor
     // constructors with overloads
     player() {std::cout << "No argument constructor is called" << std::endl;}
     player(std::string name) {std::cout << "String constructor created ! for " << name << std::endl;}
