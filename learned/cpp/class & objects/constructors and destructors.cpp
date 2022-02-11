@@ -24,7 +24,7 @@ class player {
 };
 
 int main() {
-    // they are seperated by scopes "{}"
+    // they are separated by scopes "{}"
     // when class is out of scope then destructor is called
     {
         player meek;
