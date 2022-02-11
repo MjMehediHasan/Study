@@ -37,8 +37,8 @@ class player {
     // Best way is to initialize the values in the constructor when object is created
     // just works on constructor initializer
     // the idea is to call another constructor (same name as the class) to initialize the object
-    player(std::string name)
-    : player {name, 100, 0} {
+    player(std::string name_val)    // use unique names
+    : player {name_val, 100, 0} {
         std::cout << "String constructor created ! for " << name << std::endl;
     }
 
