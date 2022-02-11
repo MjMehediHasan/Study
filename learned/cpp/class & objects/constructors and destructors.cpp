@@ -14,25 +14,47 @@ class player {
     void set_name(std::string name) {this->name = name;}    // "this" is a pointer to the object
     // void set_name(std::string name_input) {name = name_input;}
 
+
     // member methods with same name as class is called constructor
     // constructors with overloads
-    player() {
-        name = "Def_Player";
-        health = 100;
-        xp = 0;
+
+
+    // player() {
+    //     name = "Def_Player";
+    //     health = 100;
+    //     xp = 0;
+    //     std::cout << "No argument constructor is called" << std::endl;
+    // }
+
+
+    // Best way is to initialize the values in the constructor when object is created
+    // not assigning them after the object is created like upper example
+
+    player()
+    : name {"Def_Player"}, health {100}, xp {0} {
         std::cout << "No argument constructor is called" << std::endl;
     }
-    player(std::string name) {
-        this->name = name;
+
+    player(std::string name)
+    : name {name}, health {100}, xp {0} {
         std::cout << "String constructor created ! for " << name << std::endl;
-        }
-    player(std::string name, int health, int xp) {
-        this->name = name;
-        this->health = health;
-        this->xp = xp;
+    }
+
+    // player(std::string name, int health, int xp) {
+    //     this->name = name;
+    //     this->health = health;
+    //     this->xp = xp;
+    //     std::cout << "Three argument constructor called! for " << name << std::endl;
+    // }
+
+    // New way
+    player(std::string name, int health, int xp)
+    : name {name}, health {health}, xp {xp} {
         std::cout << "Three argument constructor called! for " << name << std::endl;
     }
-    // destructor
+
+
+    // Destructor
     ~player() {std::cout << "Destructor called! for " << name << std::endl;}
 };
 
