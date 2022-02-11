@@ -7,19 +7,31 @@
 
 class player {
  private:
-    std::string name{"Player"};
-    int health{100};
-    int xp{0};
+    std::string name;
+    int health;
+    int xp;
  public:
     void set_name(std::string name) {this->name = name;}    // "this" is a pointer to the object
     // void set_name(std::string name_input) {name = name_input;}
 
     // member methods with same name as class is called constructor
     // constructors with overloads
-    player() {std::cout << "No argument constructor is called" << std::endl;}
-    player(std::string name) {std::cout << "String constructor created ! for " << name << std::endl;}
-    player(std::string name, int health, int xp) {std::cout << "Three argument constructor called! for " << name << std::endl;}
-
+    player() {
+        name = "Def_Player";
+        health = 100;
+        xp = 0;
+        std::cout << "No argument constructor is called" << std::endl;
+    }
+    player(std::string name) {
+        this->name = name;
+        std::cout << "String constructor created ! for " << name << std::endl;
+        }
+    player(std::string name, int health, int xp) {
+        this->name = name;
+        this->health = health;
+        this->xp = xp;
+        std::cout << "Three argument constructor called! for " << name << std::endl;
+    }
     // destructor
     ~player() {std::cout << "Destructor called! for " << name << std::endl;}
 };
