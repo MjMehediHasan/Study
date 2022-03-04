@@ -22,7 +22,7 @@ move::move(int d) {
 // copy constructor
 // Dangling constructor
 move::move(const move &source)
-    : move(*source.data) {            // move(source => data)
+    : move(*source.data) {            // move(source -> data)
         std::cout << "Copy Constructor (Deep-Copy) for : " << *data << std::endl;
 }
 
