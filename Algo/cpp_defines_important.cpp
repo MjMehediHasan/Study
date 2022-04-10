@@ -59,4 +59,7 @@ using namespace std;
 #pragma GCC optimization ("unroll-loops")
 #pragma GCC optimize("Ofast")
 #pragma GCC target("avx,avx2,fma")
+#define FI                    freopen("input.txt", "r", stdin)
+#define FO                    freopen("output.txt", "w", stdout)
+#define FasterIO              ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
 
