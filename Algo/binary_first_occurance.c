@@ -1,3 +1,6 @@
+#include <stdio.h>
+long long int a[100001];
+
 long long int first(long long int low, long long int high, long long int key) {
     long long int ans = -1;
     while (low <= high) {
