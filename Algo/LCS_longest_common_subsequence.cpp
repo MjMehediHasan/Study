@@ -3,6 +3,8 @@
 using namespace std;
 
 /* Returns length of LCS for X[0..m-1], Y[0..n-1] */
+// With memorization
+
 int lcs(char* X, char* Y, int m, int n,
 		vector<vector<int> >& dp)
 {
