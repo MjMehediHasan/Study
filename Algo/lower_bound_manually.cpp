@@ -4,7 +4,7 @@ ll lower_bound(vector<ll> &arr, ll X)
     ll low = 0;
     ll high = arr.size() - 1;
 
-    if (arr[high] < X) return -2;
+    if (arr[high] < X) return -1;       // Put your args
     if (arr[low] >= X) return 0;
 
     while (low <= high) {
