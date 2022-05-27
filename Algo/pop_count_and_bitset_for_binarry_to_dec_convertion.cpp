@@ -7,7 +7,7 @@ using namespace std;
 
 ll bin(ll &n) {
     auto bit = std::bitset<32>(n).to_ullong();
-    return __builtin_popcount(bit);
+    return __builtin_popcount(bit);     // Builtin function to count population of '1' in binarry
 }
 
 int main() {
