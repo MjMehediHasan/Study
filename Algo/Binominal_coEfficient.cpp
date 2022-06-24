@@ -40,3 +40,12 @@ int main() {
         cout << n << " things taken " << m << " at a time is " << binomialCoeff(n, m) << " exactly.\n";
     }
 }
+
+/*
+
+1
+1 1
+1 2 1
+1 2 3 2 1
+
+*/
