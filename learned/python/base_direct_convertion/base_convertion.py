@@ -4,7 +4,7 @@ def divide(a, b, base):
     remainder = 0
     digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     for digit in str(a):
-        if (int(digit) >= base):
+        if (digits.index(digit) >= base):
             return -1, -1
         dividend = remainder * base + digits.index(digit)
         quotient_digit = dividend // b
